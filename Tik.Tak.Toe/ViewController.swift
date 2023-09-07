@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print("Edit Player 1 name to \(lblPlayer1.text)")
     }
     
-    
+    //MARK: Fix Button
     @IBAction func editNamePlayer2(_ sender: UIButton) {
         lblPlayer1.isHidden = true
         lblPlayer2.isHidden = true
@@ -47,6 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         btnEditNamePLayer1.isHidden = false
         btnEditNamePlayer2.isHidden = true
         btnSave.isHidden = false
+        
         print("Edit Player 2 name to \(lblPlayer2.text)")
     }
     
