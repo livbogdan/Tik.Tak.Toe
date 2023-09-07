@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E313137C2AA9FEA7003B1586 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313137B2AA9FEA7003B1586 /* AppDelegate.swift */; };
+		E313137E2AA9FEA7003B1586 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313137D2AA9FEA7003B1586 /* SceneDelegate.swift */; };
+		E31313802AA9FEA7003B1586 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313137F2AA9FEA7003B1586 /* ViewController.swift */; };
+		E31313832AA9FEA7003B1586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31313812AA9FEA7003B1586 /* Main.storyboard */; };
+		E31313852AA9FEAA003B1586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E31313842AA9FEAA003B1586 /* Assets.xcassets */; };
+		E31313882AA9FEAA003B1586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31313862AA9FEAA003B1586 /* LaunchScreen.storyboard */; };
+		E31313932AA9FEAA003B1586 /* Tik_Tak_ToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31313922AA9FEAA003B1586 /* Tik_Tak_ToeTests.swift */; };
+		E313139D2AA9FEAA003B1586 /* Tik_Tak_ToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313139C2AA9FEAA003B1586 /* Tik_Tak_ToeUITests.swift */; };
+		E313139F2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313139E2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E313138F2AA9FEAA003B1586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E31313702AA9FEA7003B1586 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E31313772AA9FEA7003B1586;
+			remoteInfo = Tik.Tak.Toe;
+		};
+		E31313992AA9FEAA003B1586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E31313702AA9FEA7003B1586 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E31313772AA9FEA7003B1586;
+			remoteInfo = Tik.Tak.Toe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E31313782AA9FEA7003B1586 /* Tik.Tak.Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tik.Tak.Toe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E313137B2AA9FEA7003B1586 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E313137D2AA9FEA7003B1586 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E313137F2AA9FEA7003B1586 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E31313822AA9FEA7003B1586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E31313842AA9FEAA003B1586 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E31313872AA9FEAA003B1586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E31313892AA9FEAA003B1586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E313138E2AA9FEAA003B1586 /* Tik.Tak.ToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tik.Tak.ToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E31313922AA9FEAA003B1586 /* Tik_Tak_ToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tik_Tak_ToeTests.swift; sourceTree = "<group>"; };
+		E31313982AA9FEAA003B1586 /* Tik.Tak.ToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tik.Tak.ToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E313139C2AA9FEAA003B1586 /* Tik_Tak_ToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tik_Tak_ToeUITests.swift; sourceTree = "<group>"; };
+		E313139E2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tik_Tak_ToeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E31313752AA9FEA7003B1586 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E313138B2AA9FEAA003B1586 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E31313952AA9FEAA003B1586 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E313136F2AA9FEA7003B1586 = {
+			isa = PBXGroup;
+			children = (
+				E313137A2AA9FEA7003B1586 /* Tik.Tak.Toe */,
+				E31313912AA9FEAA003B1586 /* Tik.Tak.ToeTests */,
+				E313139B2AA9FEAA003B1586 /* Tik.Tak.ToeUITests */,
+				E31313792AA9FEA7003B1586 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E31313792AA9FEA7003B1586 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E31313782AA9FEA7003B1586 /* Tik.Tak.Toe.app */,
+				E313138E2AA9FEAA003B1586 /* Tik.Tak.ToeTests.xctest */,
+				E31313982AA9FEAA003B1586 /* Tik.Tak.ToeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E313137A2AA9FEA7003B1586 /* Tik.Tak.Toe */ = {
+			isa = PBXGroup;
+			children = (
+				E313137B2AA9FEA7003B1586 /* AppDelegate.swift */,
+				E313137D2AA9FEA7003B1586 /* SceneDelegate.swift */,
+				E313137F2AA9FEA7003B1586 /* ViewController.swift */,
+				E31313812AA9FEA7003B1586 /* Main.storyboard */,
+				E31313842AA9FEAA003B1586 /* Assets.xcassets */,
+				E31313862AA9FEAA003B1586 /* LaunchScreen.storyboard */,
+				E31313892AA9FEAA003B1586 /* Info.plist */,
+			);
+			path = Tik.Tak.Toe;
+			sourceTree = "<group>";
+		};
+		E31313912AA9FEAA003B1586 /* Tik.Tak.ToeTests */ = {
+			isa = PBXGroup;
+			children = (
+				E31313922AA9FEAA003B1586 /* Tik_Tak_ToeTests.swift */,
+			);
+			path = Tik.Tak.ToeTests;
+			sourceTree = "<group>";
+		};
+		E313139B2AA9FEAA003B1586 /* Tik.Tak.ToeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E313139C2AA9FEAA003B1586 /* Tik_Tak_ToeUITests.swift */,
+				E313139E2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift */,
+			);
+			path = Tik.Tak.ToeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E31313772AA9FEA7003B1586 /* Tik.Tak.Toe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E31313A22AA9FEAA003B1586 /* Build configuration list for PBXNativeTarget "Tik.Tak.Toe" */;
+			buildPhases = (
+				E31313742AA9FEA7003B1586 /* Sources */,
+				E31313752AA9FEA7003B1586 /* Frameworks */,
+				E31313762AA9FEA7003B1586 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tik.Tak.Toe;
+			productName = Tik.Tak.Toe;
+			productReference = E31313782AA9FEA7003B1586 /* Tik.Tak.Toe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E313138D2AA9FEAA003B1586 /* Tik.Tak.ToeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E31313A52AA9FEAA003B1586 /* Build configuration list for PBXNativeTarget "Tik.Tak.ToeTests" */;
+			buildPhases = (
+				E313138A2AA9FEAA003B1586 /* Sources */,
+				E313138B2AA9FEAA003B1586 /* Frameworks */,
+				E313138C2AA9FEAA003B1586 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E31313902AA9FEAA003B1586 /* PBXTargetDependency */,
+			);
+			name = Tik.Tak.ToeTests;
+			productName = Tik.Tak.ToeTests;
+			productReference = E313138E2AA9FEAA003B1586 /* Tik.Tak.ToeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E31313972AA9FEAA003B1586 /* Tik.Tak.ToeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E31313A82AA9FEAA003B1586 /* Build configuration list for PBXNativeTarget "Tik.Tak.ToeUITests" */;
+			buildPhases = (
+				E31313942AA9FEAA003B1586 /* Sources */,
+				E31313952AA9FEAA003B1586 /* Frameworks */,
+				E31313962AA9FEAA003B1586 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E313139A2AA9FEAA003B1586 /* PBXTargetDependency */,
+			);
+			name = Tik.Tak.ToeUITests;
+			productName = Tik.Tak.ToeUITests;
+			productReference = E31313982AA9FEAA003B1586 /* Tik.Tak.ToeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E31313702AA9FEA7003B1586 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					E31313772AA9FEA7003B1586 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					E313138D2AA9FEAA003B1586 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E31313772AA9FEA7003B1586;
+					};
+					E31313972AA9FEAA003B1586 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E31313772AA9FEA7003B1586;
+					};
+				};
+			};
+			buildConfigurationList = E31313732AA9FEA7003B1586 /* Build configuration list for PBXProject "Tik.Tak.Toe" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E313136F2AA9FEA7003B1586;
+			productRefGroup = E31313792AA9FEA7003B1586 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E31313772AA9FEA7003B1586 /* Tik.Tak.Toe */,
+				E313138D2AA9FEAA003B1586 /* Tik.Tak.ToeTests */,
+				E31313972AA9FEAA003B1586 /* Tik.Tak.ToeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E31313762AA9FEA7003B1586 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31313882AA9FEAA003B1586 /* LaunchScreen.storyboard in Resources */,
+				E31313852AA9FEAA003B1586 /* Assets.xcassets in Resources */,
+				E31313832AA9FEA7003B1586 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E313138C2AA9FEAA003B1586 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E31313962AA9FEAA003B1586 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E31313742AA9FEA7003B1586 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31313802AA9FEA7003B1586 /* ViewController.swift in Sources */,
+				E313137C2AA9FEA7003B1586 /* AppDelegate.swift in Sources */,
+				E313137E2AA9FEA7003B1586 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E313138A2AA9FEAA003B1586 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31313932AA9FEAA003B1586 /* Tik_Tak_ToeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E31313942AA9FEAA003B1586 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E313139D2AA9FEAA003B1586 /* Tik_Tak_ToeUITests.swift in Sources */,
+				E313139F2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E31313902AA9FEAA003B1586 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E31313772AA9FEA7003B1586 /* Tik.Tak.Toe */;
+			targetProxy = E313138F2AA9FEAA003B1586 /* PBXContainerItemProxy */;
+		};
+		E313139A2AA9FEAA003B1586 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E31313772AA9FEA7003B1586 /* Tik.Tak.Toe */;
+			targetProxy = E31313992AA9FEAA003B1586 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E31313812AA9FEA7003B1586 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E31313822AA9FEA7003B1586 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E31313862AA9FEAA003B1586 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E31313872AA9FEAA003B1586 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E31313A02AA9FEAA003B1586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E31313A12AA9FEAA003B1586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E31313A32AA9FEAA003B1586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tik.Tak.Toe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.livbogdan.Tik-Tak-Toe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E31313A42AA9FEAA003B1586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tik.Tak.Toe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.livbogdan.Tik-Tak-Toe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E31313A62AA9FEAA003B1586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.livbogdan.Tik-Tak-ToeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tik.Tak.Toe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tik.Tak.Toe";
+			};
+			name = Debug;
+		};
+		E31313A72AA9FEAA003B1586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.livbogdan.Tik-Tak-ToeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tik.Tak.Toe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tik.Tak.Toe";
+			};
+			name = Release;
+		};
+		E31313A92AA9FEAA003B1586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.livbogdan.Tik-Tak-ToeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tik.Tak.Toe;
+			};
+			name = Debug;
+		};
+		E31313AA2AA9FEAA003B1586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.livbogdan.Tik-Tak-ToeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tik.Tak.Toe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E31313732AA9FEA7003B1586 /* Build configuration list for PBXProject "Tik.Tak.Toe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E31313A02AA9FEAA003B1586 /* Debug */,
+				E31313A12AA9FEAA003B1586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E31313A22AA9FEAA003B1586 /* Build configuration list for PBXNativeTarget "Tik.Tak.Toe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E31313A32AA9FEAA003B1586 /* Debug */,
+				E31313A42AA9FEAA003B1586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E31313A52AA9FEAA003B1586 /* Build configuration list for PBXNativeTarget "Tik.Tak.ToeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E31313A62AA9FEAA003B1586 /* Debug */,
+				E31313A72AA9FEAA003B1586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E31313A82AA9FEAA003B1586 /* Build configuration list for PBXNativeTarget "Tik.Tak.ToeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E31313A92AA9FEAA003B1586 /* Debug */,
+				E31313AA2AA9FEAA003B1586 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E31313702AA9FEA7003B1586 /* Project object */;
+}
