@@ -2,12 +2,19 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-
+    //Bool for Edit button
     var isEdit = false
     
-    //Player name
+    // Segue
+    let pvpGameSegue = "pvpgame"
+    
+    //Players name
     @IBOutlet weak var lblPlayer1: UILabel!
     @IBOutlet weak var lblPlayer2: UILabel!
+    
+    //Send Players name to another View
+    var player1TextToPass: String?
+    var player2TextToPass: String?
     
     //PLayer Text Field
     @IBOutlet weak var tfPlayer1: UITextField!
@@ -17,17 +24,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnEditNamePLayer1: UIButton!
     @IBOutlet weak var btnEditNamePlayer2: UIButton!
     
+    //Navigation Button
+    @IBOutlet weak var btnPlay: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tfPlayer1.isHidden = true
         tfPlayer1.delegate = self
         tfPlayer2.isHidden = true
         tfPlayer2.delegate = self
-        
-        // Do any additional setup after loading the view.
     }
     
-    //MARK: Fix print line and set UI image
     @IBAction func editNamePlayer1(_ sender: UIButton) {
         
         if isEdit {
@@ -38,8 +45,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             // Hide the text field and show the label
             tfPlayer1.isHidden = true
             lblPlayer1.isHidden = false
-            btnEditNamePLayer1.setImage(UIImage(systemName: "square.fill"), for: .normal)
-            print("Current name is \(lblPlayer2.text ?? "")")
+            btnEditNamePLayer1.setImage(UIImage(systemName: "pencil"), for: .normal)
+            print("New name is \(lblPlayer1.text ?? "")")
         } else {
             // Resign first responder for Player 1's text field
             tfPlayer2.resignFirstResponder()
@@ -47,16 +54,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
             tfPlayer1.text = lblPlayer1.text
             tfPlayer1.isHidden = false
             lblPlayer1.isHidden = true
-            btnEditNamePLayer1.setImage(UIImage(systemName: "multiply"), for: .normal)
+            btnEditNamePLayer1.setImage(UIImage(systemName: "checkmark"), for: .normal)
             tfPlayer1.becomeFirstResponder() // Show the keyboard
-            print("\(lblPlayer1.text ?? "") named to \(lblPlayer1.text ?? "")")
+            print("Old name is \(lblPlayer1.text ?? "")")
         }
         
         isEdit = !isEdit
         
     }
 
-    //MARK: Fix print line and set UI image
     @IBAction func editNamePlayer2(_ sender: UIButton) {
         
         if isEdit {
@@ -67,8 +73,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             // Hide the text field and show the label
             tfPlayer2.isHidden = true
             lblPlayer2.isHidden = false
-            btnEditNamePlayer2.setTitle("Edit Name", for: .normal)
-            print("Current name is \(lblPlayer2.text ?? "")")
+            btnEditNamePlayer2.setImage(UIImage(systemName: "pencil"), for: .normal)
+            print("New name is \(lblPlayer2.text ?? "")")
         } else {
             // Resign first responder for Player 2's text field
             tfPlayer1.resignFirstResponder()
@@ -76,12 +82,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
             tfPlayer2.text = lblPlayer2.text
             tfPlayer2.isHidden = false
             lblPlayer2.isHidden = true
-            btnEditNamePlayer2.setTitle("Save Name", for: .normal)
+            btnEditNamePlayer2.setImage(UIImage(systemName: "checkmark"), for: .normal)
             tfPlayer2.becomeFirstResponder()// Show the keyboard
 
-            print("\(lblPlayer2.text ?? "") named to \(lblPlayer2.text ?? "")")
+            print("Old name is \(lblPlayer2.text ?? "")")
         }
         
         isEdit = !isEdit
+    }
+    
+    @IBAction func startGame(_ sender: UIButton) {
+        performSegue(withIdentifier: pvpGameSegue, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == pvpGameSegue {
+            if let destinationVC = segue.destination as? PVPGameViewController {
+                destinationVC.p1receivedText = lblPlayer1.text
+                destinationVC.p2receivedText = lblPlayer2.text
+            }
+        }
     }
 }

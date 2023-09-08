@@ -16,6 +16,7 @@
 		E31313932AA9FEAA003B1586 /* Tik_Tak_ToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31313922AA9FEAA003B1586 /* Tik_Tak_ToeTests.swift */; };
 		E313139D2AA9FEAA003B1586 /* Tik_Tak_ToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313139C2AA9FEAA003B1586 /* Tik_Tak_ToeUITests.swift */; };
 		E313139F2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313139E2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift */; };
+		E31313AC2AABC3AC003B1586 /* PVPGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31313AB2AABC3AC003B1586 /* PVPGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E31313982AA9FEAA003B1586 /* Tik.Tak.ToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tik.Tak.ToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E313139C2AA9FEAA003B1586 /* Tik_Tak_ToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tik_Tak_ToeUITests.swift; sourceTree = "<group>"; };
 		E313139E2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tik_Tak_ToeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E31313AB2AABC3AC003B1586 /* PVPGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				E313137D2AA9FEA7003B1586 /* SceneDelegate.swift */,
 				E313137F2AA9FEA7003B1586 /* ViewController.swift */,
 				E31313812AA9FEA7003B1586 /* Main.storyboard */,
+				E31313AB2AABC3AC003B1586 /* PVPGameViewController.swift */,
 				E31313842AA9FEAA003B1586 /* Assets.xcassets */,
 				E31313862AA9FEAA003B1586 /* LaunchScreen.storyboard */,
 				E31313892AA9FEAA003B1586 /* Info.plist */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E31313802AA9FEA7003B1586 /* ViewController.swift in Sources */,
+				E31313AC2AABC3AC003B1586 /* PVPGameViewController.swift in Sources */,
 				E313137C2AA9FEA7003B1586 /* AppDelegate.swift in Sources */,
 				E313137E2AA9FEA7003B1586 /* SceneDelegate.swift in Sources */,
 			);
