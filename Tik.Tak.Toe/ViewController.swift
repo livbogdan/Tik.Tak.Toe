@@ -1,75 +1,87 @@
-//
-//  ViewController.swift
-//  Tik.Tak.Toe
-//
-//  Created by Bogdan Livanov on 2023-09-07.
-//
-
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    //MARK: Edit Player Name Outlet
+
+    var isEdit = false
     
+    //Player name
     @IBOutlet weak var lblPlayer1: UILabel!
     @IBOutlet weak var lblPlayer2: UILabel!
-    @IBOutlet weak var txtFldChangeName: UITextField!
-    @IBOutlet weak var btnSave: UIButton!
     
+    //PLayer Text Field
+    @IBOutlet weak var tfPlayer1: UITextField!
+    @IBOutlet weak var tfPlayer2: UITextField!
+    
+    //Player Edit Button
     @IBOutlet weak var btnEditNamePLayer1: UIButton!
     @IBOutlet weak var btnEditNamePlayer2: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtFldChangeName.isHidden = true
+        tfPlayer1.isHidden = true
+        tfPlayer1.delegate = self
+        tfPlayer2.isHidden = true
+        tfPlayer2.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
-    
+    //MARK: Fix print line and set UI image
     @IBAction func editNamePlayer1(_ sender: UIButton) {
         
-        lblPlayer1.isHidden = true
-        lblPlayer2.isHidden = true
-        txtFldChangeName.isHidden = false
-        txtFldChangeName.text = lblPlayer1.text
-        btnEditNamePLayer1.isHidden = true
-        btnEditNamePlayer2.isHidden = false
-        btnSave.isHidden = false
-        print("Edit Player 1 name to \(lblPlayer1.text)")
-    }
-    
-    //MARK: Fix Button
-    @IBAction func editNamePlayer2(_ sender: UIButton) {
-        lblPlayer1.isHidden = true
-        lblPlayer2.isHidden = true
-        txtFldChangeName.isHidden = false
-        txtFldChangeName.text = lblPlayer2.text
-        btnEditNamePLayer1.isHidden = false
-        btnEditNamePlayer2.isHidden = true
-        btnSave.isHidden = false
-        
-        print("Edit Player 2 name to \(lblPlayer2.text)")
-    }
-    
-    
-    @IBAction func saveButton(_ sender: UIButton) {
-        
-        if txtFldChangeName.isHidden == false {
-            if btnEditNamePLayer1.isHidden == true {
-                // Editing Player 1's name
-                lblPlayer1.text = txtFldChangeName.text
-            } else if btnEditNamePlayer2.isHidden == true {
-                // Editing Player 2's name
-                lblPlayer2.text = txtFldChangeName.text
+        if isEdit {
+            // Save the edited name and update the label
+            if let editedName = tfPlayer1.text {
+                lblPlayer1.text = editedName
             }
-            
+            // Hide the text field and show the label
+            tfPlayer1.isHidden = true
             lblPlayer1.isHidden = false
-            lblPlayer2.isHidden = false
-            txtFldChangeName.isHidden = true
-            btnEditNamePLayer1.isHidden = false
-            btnSave.isHidden = true
+            btnEditNamePLayer1.setImage(UIImage(systemName: "square.fill"), for: .normal)
+            print("Current name is \(lblPlayer2.text ?? "")")
+        } else {
+            // Resign first responder for Player 1's text field
+            tfPlayer2.resignFirstResponder()
+            // Start editing
+            tfPlayer1.text = lblPlayer1.text
+            tfPlayer1.isHidden = false
+            lblPlayer1.isHidden = true
+            btnEditNamePLayer1.setImage(UIImage(systemName: "multiply"), for: .normal)
+            tfPlayer1.becomeFirstResponder() // Show the keyboard
+            print("\(lblPlayer1.text ?? "") named to \(lblPlayer1.text ?? "")")
         }
         
+        isEdit = !isEdit
+        
     }
-    
+
+    //MARK: Fix print line and set UI image
+    @IBAction func editNamePlayer2(_ sender: UIButton) {
+        
+        if isEdit {
+            // Save the edited name and update the label
+            if let editedName = tfPlayer2.text {
+                lblPlayer2.text = editedName
+            }
+            // Hide the text field and show the label
+            tfPlayer2.isHidden = true
+            lblPlayer2.isHidden = false
+            btnEditNamePlayer2.setTitle("Edit Name", for: .normal)
+            print("Current name is \(lblPlayer2.text ?? "")")
+        } else {
+            // Resign first responder for Player 2's text field
+            tfPlayer1.resignFirstResponder()
+            // Start editing
+            tfPlayer2.text = lblPlayer2.text
+            tfPlayer2.isHidden = false
+            lblPlayer2.isHidden = true
+            btnEditNamePlayer2.setTitle("Save Name", for: .normal)
+            tfPlayer2.becomeFirstResponder()// Show the keyboard
+
+            print("\(lblPlayer2.text ?? "") named to \(lblPlayer2.text ?? "")")
+        }
+        
+        isEdit = !isEdit
+    }
 }
