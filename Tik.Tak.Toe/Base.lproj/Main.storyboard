@@ -139,7 +139,7 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="-2"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vkV-qT-DaG">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vkV-qT-DaG" userLabel="Game Board">
                                 <rect key="frame" x="62" y="281" width="249" height="242"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -179,6 +179,13 @@
                                             <outletCollection property="gestureRecognizers" destination="g3v-gj-TbU" appends="YES" id="97z-Fc-8IO"/>
                                         </connections>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="CvQ-xs-TVp" userLabel="cell 2x3">
+                                        <rect key="frame" x="172" y="86" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="xjX-Kl-KcQ" appends="YES" id="d8W-eg-muR"/>
+                                        </connections>
+                                    </imageView>
                                     <imageView clipsSubviews="YES" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="rAV-Q0-RbN" userLabel="cell 3x1">
                                         <rect key="frame" x="8" y="164" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -198,13 +205,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="2oY-XO-ued" appends="YES" id="bDB-FE-0cv"/>
-                                        </connections>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="CvQ-xs-TVp" userLabel="cell 2x3">
-                                        <rect key="frame" x="172" y="86" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="xjX-Kl-KcQ" appends="YES" id="d8W-eg-muR"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
