@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    //Bool for Edit button
+    //Bool for Edit Button
     var isEdit = false
     
     // Segue

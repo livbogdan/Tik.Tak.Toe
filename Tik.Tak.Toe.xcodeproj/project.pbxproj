@@ -101,11 +101,11 @@
 		E313137A2AA9FEA7003B1586 /* Tik.Tak.Toe */ = {
 			isa = PBXGroup;
 			children = (
+				E3DDC6CD2AACD0F900D716D9 /* Model */,
+				E3DDC6CC2AACD0D800D716D9 /* Controller */,
 				E313137B2AA9FEA7003B1586 /* AppDelegate.swift */,
 				E313137D2AA9FEA7003B1586 /* SceneDelegate.swift */,
-				E313137F2AA9FEA7003B1586 /* ViewController.swift */,
 				E31313812AA9FEA7003B1586 /* Main.storyboard */,
-				E31313AB2AABC3AC003B1586 /* PVPGameViewController.swift */,
 				E31313842AA9FEAA003B1586 /* Assets.xcassets */,
 				E31313862AA9FEAA003B1586 /* LaunchScreen.storyboard */,
 				E31313892AA9FEAA003B1586 /* Info.plist */,
@@ -128,6 +128,22 @@
 				E313139E2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift */,
 			);
 			path = Tik.Tak.ToeUITests;
+			sourceTree = "<group>";
+		};
+		E3DDC6CC2AACD0D800D716D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E313137F2AA9FEA7003B1586 /* ViewController.swift */,
+				E31313AB2AABC3AC003B1586 /* PVPGameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E3DDC6CD2AACD0F900D716D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +209,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					"cell 1x3",
+				);
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
