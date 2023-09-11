@@ -23,7 +23,14 @@ class PVPGameViewController: UIViewController {
     var p2receivedText: String?
     
     var currentPlayer: Player = .X
+    
     var gameBoard: [Int: Player] = [:]
+    var gameOver = false
+    
+    let winCombination:[[Int]] = [
+        [1, 2, 3], [4, 5, 6], [7, 8, 9], // Rows
+        [1, 4, 7], [2, 5, 8], [3, 6, 9], // Columns
+        [1, 5, 9], [3, 5, 7]] // Diagonals
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +48,16 @@ class PVPGameViewController: UIViewController {
         }
     }
     
+    func checkForWin() -> Bool {
+        for combination in winCombination {
+            if let player = gameBoard[combination[0]],
+                player == gameBoard[combination[1]],
+                player == gameBoard[combination[2]] {
+                return true
+            }
+        }
+        return false
+    }
     
     @IBAction func tapped(_ sender: UITapGestureRecognizer) {
         // Identify which UIImageView was tapped
@@ -60,9 +77,13 @@ class PVPGameViewController: UIViewController {
                     print("0 Cell with tag \(imageViewTag) was tapped.")
                 }
                 
-                // Switch to the other player
-                currentPlayer = (currentPlayer == .X) ? .O : .X
-                
+                if checkForWin() {
+                    gameOver = true
+                    print("\(currentPlayer) Win!!!")
+                } else {
+                    // Switch to the other player
+                    currentPlayer = (currentPlayer == .X) ? .O : .X
+                }
                 // Disable the gesture recognizer for this cell
                 imageView.isUserInteractionEnabled = false
             }
