@@ -13,6 +13,7 @@ class PVPGameViewController: UIViewController {
     @IBOutlet weak var lblPlayer1: UILabel!
     @IBOutlet weak var lblPlayer2: UILabel!
     
+    var backgroundImage = UIImage(named: "background")
     
     var p1receivedText: String?
     var p2receivedText: String?
@@ -29,7 +30,7 @@ class PVPGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         if let text = p1receivedText {
             lblPlayer1.text = text
         }
@@ -43,6 +44,12 @@ class PVPGameViewController: UIViewController {
         }
         
         resetGameBoard()
+        
+        // Assuming you have a reference to your UIImageView
+        if let imageView = view.subviews.first(where: { $0 is UIImageView }) as? UIImageView {
+            // Reset the image to a default or empty image when the game ends
+            imageView.image = backgroundImage // Replace "defaultImage" with the name of your default image asset
+        }
     }
     
     func checkForWin() -> Bool {
@@ -64,17 +71,22 @@ class PVPGameViewController: UIViewController {
     func resetGameBoard() {
             for i in 1...9 {
                 gameBoard[i] = nil
+                if let imageView = view.viewWithTag(i) as? UIImageView {
+                    imageView.image = backgroundImage
+                    print(" Image with tag \(imageView.tag) is reset.")
+                }
             }
             
             gameOver = false
             
-            for subview in view.subviews where subview is UIImageView {
-                if let imageView = subview as? UIImageView {
-                    imageView.image = nil
-                    imageView.isUserInteractionEnabled = true
-                }
-            }
-            
+//            for subview in view.subviews where subview is UIImageView {
+//                if let imageView = subview as? UIImageView {
+//                    imageView.image = nil
+//                    imageView.isUserInteractionEnabled = true
+//                    print("swap background")
+//                }
+//            }
+            print("game restarted")
             currentPlayer = .X
         }
     
@@ -87,6 +99,10 @@ class PVPGameViewController: UIViewController {
         }
     
     @IBAction func tapped(_ sender: UITapGestureRecognizer) {
+        if gameOver {
+            return
+        }
+        
         // Identify which UIImageView was tapped
         if let imageView = sender.view as? UIImageView {
             let imageViewTag = imageView.tag
