@@ -1,10 +1,3 @@
-//
-//  PVPGameViewController.swift
-//  Tik.Tak.Toe
-//
-//  Created by Bogdan Livanov on 2023-09-08.
-//
-
 import UIKit
 
 class PVPGameViewController: UIViewController {
@@ -16,8 +9,10 @@ class PVPGameViewController: UIViewController {
     
     @IBOutlet weak var lblScore: UILabel!
     
+    
     @IBOutlet weak var lblPlayer1: UILabel!
     @IBOutlet weak var lblPlayer2: UILabel!
+    
     
     var p1receivedText: String?
     var p2receivedText: String?
@@ -28,9 +23,9 @@ class PVPGameViewController: UIViewController {
     var gameOver = false
     
     let winCombination:[[Int]] = [
-        [1, 2, 3], [4, 5, 6], [7, 8, 9], // Rows
-        [1, 4, 7], [2, 5, 8], [3, 6, 9], // Columns
-        [1, 5, 9], [3, 5, 7]] // Diagonals
+        [1, 2, 3], [4, 5, 6], [7, 8, 9],    // Rows
+        [1, 4, 7], [2, 5, 8], [3, 6, 9],    // Columns
+        [1, 5, 9], [3, 5, 7]]               // Diagonals
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,18 +41,50 @@ class PVPGameViewController: UIViewController {
         for i in 1...9 {
             gameBoard[i] = nil
         }
+        
+        resetGameBoard()
     }
     
     func checkForWin() -> Bool {
         for combination in winCombination {
-            if let player = gameBoard[combination[0]],
-                player == gameBoard[combination[1]],
-                player == gameBoard[combination[2]] {
+            if let player = gameBoard[combination[0]],  // Row combination
+                player == gameBoard[combination[1]],    // Columns combination
+                player == gameBoard[combination[2]]     // Diagonal combination
+            {
                 return true
             }
         }
         return false
     }
+    
+    func checkForDraw() -> Bool {
+        return gameBoard.values.compactMap { $0 }.count == 9
+    }
+    
+    func resetGameBoard() {
+            for i in 1...9 {
+                gameBoard[i] = nil
+            }
+            
+            gameOver = false
+            
+            for subview in view.subviews where subview is UIImageView {
+                if let imageView = subview as? UIImageView {
+                    imageView.image = nil
+                    imageView.isUserInteractionEnabled = true
+                }
+            }
+            
+            currentPlayer = .X
+        }
+    
+    func showResult(_ result: String) {
+        let alertController = UIAlertController(title: "Game Over", message: result, preferredStyle: .alert)
+        let restartAction = UIAlertAction(title: "Restart", style: .default) { _ in self.resetGameBoard()
+        }
+            alertController.addAction(restartAction)
+            present(alertController, animated: true, completion: nil)
+        }
     
     @IBAction func tapped(_ sender: UITapGestureRecognizer) {
         // Identify which UIImageView was tapped
@@ -79,8 +106,17 @@ class PVPGameViewController: UIViewController {
                 
                 if checkForWin() {
                     gameOver = true
+                    showResult("Player \(currentPlayer) is won!")
                     print("\(currentPlayer) Win!!!")
-                } else {
+                }
+                else if checkForDraw()
+                {
+                    gameOver = true
+                    showResult("It Draw")
+                    print("Its Draw")
+                }
+                else
+                {
                     // Switch to the other player
                     currentPlayer = (currentPlayer == .X) ? .O : .X
                 }
@@ -90,4 +126,5 @@ class PVPGameViewController: UIViewController {
         }
         
     }
+    
 }

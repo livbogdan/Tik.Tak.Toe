@@ -218,7 +218,7 @@
                     <connections>
                         <outlet property="lblPlayer1" destination="djS-Dj-bON" id="7Tu-Vf-A6k"/>
                         <outlet property="lblPlayer2" destination="c93-Wq-aDV" id="ibd-0e-Kht"/>
-                        <outlet property="lblScore" destination="179-36-jDH" id="9Ul-di-Ao3"/>
+                        <outlet property="lblScore" destination="179-36-jDH" id="OYC-5o-HzV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ind-UG-v8u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
