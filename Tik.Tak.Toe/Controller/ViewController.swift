@@ -6,7 +6,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var isEdit = false
     
     // Segue
-    let pvpGameSegue = "pvpgame"
+    let pvpGameSegue = "pvpvc"
+    let pveGameSegue = "pvevc"
     
     //Players name
     @IBOutlet weak var lblPlayer1: UILabel!
@@ -26,6 +27,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     //Navigation Button
     @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var btnPVE: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,11 +97,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: pvpGameSegue, sender: self)
     }
     
+    @IBAction func startGamePVE(_ sender: UIButton) {
+        performSegue(withIdentifier: pveGameSegue, sender: self)
+    }
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == pvpGameSegue {
             if let destinationVC = segue.destination as? PVPGameViewController {
                 destinationVC.p1receivedText = lblPlayer1.text
                 destinationVC.p2receivedText = lblPlayer2.text
+            }
+        }
+        
+        if segue.identifier == pveGameSegue {
+            if segue.destination is PVEViewController{
+                
             }
         }
     }
