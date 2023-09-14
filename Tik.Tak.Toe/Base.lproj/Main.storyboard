@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tik_Tak_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier=" " storyboardIdentifier="MainMenuViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Tik_Tak_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,18 +29,20 @@
                                 </attributedString>
                                 <color key="highlightedColor" systemColor="opaqueSeparatorColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmb-ko-SI3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmb-ko-SI3">
                                 <rect key="frame" x="86" y="249" width="179" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                 <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="10"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZO-3d-aKq">
-                                <rect key="frame" x="86" y="196" width="171" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZO-3d-aKq">
+                                <rect key="frame" x="86" y="196" width="179" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                 <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="10"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4C-cI-34K">
@@ -63,18 +63,16 @@
                                     <action selector="editNamePlayer2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1eu-Mt-VsS"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="change name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xu7-3p-qOr" userLabel="Txt Fld NamePlayer1">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="change name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xu7-3p-qOr" userLabel="Txt Fld NamePlayer1">
                                 <rect key="frame" x="86" y="196" width="179" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="change name" textAlignment="natural" minimumFontSize="17" id="kpt-vW-UDt" userLabel="Txt Fld NamePlayer2">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="change name" textAlignment="natural" minimumFontSize="17" id="kpt-vW-UDt" userLabel="Txt Fld NamePlayer2">
                                 <rect key="frame" x="86" y="249" width="179" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -98,25 +96,25 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="AccentColor"/>
                         <color key="tintColor" systemColor="systemCyanColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="d1o-co-76C"/>
                     <connections>
-                        <outlet property="btnEditNamePLayer1" destination="D4C-cI-34K" id="XSM-PM-xjv"/>
-                        <outlet property="btnEditNamePlayer2" destination="JbU-DA-cSw" id="dP4-qJ-NT6"/>
-                        <outlet property="btnPVE" destination="tG8-zt-wHx" id="oBZ-94-xUv"/>
-                        <outlet property="btnPlay" destination="1MM-QY-OSi" id="ga9-UH-Lzz"/>
-                        <outlet property="lblPlayer1" destination="iZO-3d-aKq" id="Ym8-KW-LdT"/>
-                        <outlet property="lblPlayer2" destination="wmb-ko-SI3" id="HjX-WI-zEa"/>
-                        <outlet property="tfPlayer1" destination="xu7-3p-qOr" id="avt-gb-2of"/>
-                        <outlet property="tfPlayer2" destination="kpt-vW-UDt" id="SL5-Ue-O5R"/>
-                        <segue destination="fGS-s3-P4J" kind="show" identifier="pvpvc" id="Afa-WV-gEX"/>
-                        <segue destination="jrc-Jq-5Hl" kind="show" identifier="pvevc" id="htB-AV-FsL"/>
+                        <outlet property="playVsAIButtonplayVsAIButton" destination="tG8-zt-wHx" id="oBZ-94-xUv"/>
+                        <outlet property="playVsPlayerButton" destination="1MM-QY-OSi" id="ga9-UH-Lzz"/>
+                        <outlet property="player1_EditButton" destination="D4C-cI-34K" id="XSM-PM-xjv"/>
+                        <outlet property="player1_Label" destination="iZO-3d-aKq" id="Ym8-KW-LdT"/>
+                        <outlet property="player1_TextField" destination="xu7-3p-qOr" id="avt-gb-2of"/>
+                        <outlet property="player2_EditButton" destination="JbU-DA-cSw" id="dP4-qJ-NT6"/>
+                        <outlet property="player2_Label" destination="wmb-ko-SI3" id="HjX-WI-zEa"/>
+                        <outlet property="player2_TextField" destination="kpt-vW-UDt" id="SL5-Ue-O5R"/>
+                        <segue destination="fGS-s3-P4J" kind="show" identifier="PlayerVsPlayerSegue" id="Afa-WV-gEX"/>
+                        <segue destination="jrc-Jq-5Hl" kind="show" identifier="PlayerVsAISegue" id="htB-AV-FsL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-230" y="356"/>
+            <point key="canvasLocation" x="-231.19999999999999" y="355.41871921182269"/>
         </scene>
         <!--PVP-->
         <scene sceneID="BFk-YF-4Ls">
@@ -281,7 +279,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="933.60000000000002" y="3.6945812807881775"/>
+            <point key="canvasLocation" x="834" y="53"/>
         </scene>
         <!--PVE-->
         <scene sceneID="fBo-lr-Ub2">
@@ -291,7 +289,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eI3-SK-Fae">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0-0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eI3-SK-Fae">
                                 <rect key="frame" x="37" y="57" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -303,7 +301,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcX-vR-KxW">
                                 <rect key="frame" x="37" y="150" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -380,7 +377,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" id="uSt-81-gVr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" id="uSt-81-gVr">
                                 <rect key="frame" x="37" y="629" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
@@ -394,69 +391,78 @@
                     </view>
                     <navigationItem key="navigationItem" id="svl-P2-EjZ"/>
                     <connections>
-                        <outlet property="lblPlayer1" destination="QcX-vR-KxW" id="KQa-K2-z9d"/>
-                        <outlet property="lblPlayer2" destination="uSt-81-gVr" id="XU9-rt-yzK"/>
-                        <outlet property="lblScore" destination="eI3-SK-Fae" id="k04-wf-Fz0"/>
+                        <outlet property="lblPlayer1" destination="QcX-vR-KxW" id="Tk2-5C-D3m"/>
+                        <outlet property="lblPlayer2" destination="uSt-81-gVr" id="gDv-Vm-hAR"/>
+                        <outlet property="lblScore" destination="eI3-SK-Fae" id="kRF-X7-90H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSm-pR-XGa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="UPg-Vq-1aA" userLabel="cell 1x1">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="fli-B7-93F"/>
+                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="yyT-04-xze"/>
+                        <outlet property="delegate" destination="z8W-i8-Ygi" id="g3f-lf-FCs"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="FEW-s7-BIC" userLabel="cell 1x2">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="55o-7n-dnv"/>
+                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="oUD-UV-ynk"/>
+                        <outlet property="delegate" destination="bty-PU-FAc" id="duJ-w0-QHj"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="eQU-G3-1OS" userLabel="cell 1x3">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="66n-rb-Gje"/>
+                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="AqI-WT-u6F"/>
+                        <outlet property="delegate" destination="R1u-Ke-K6X" id="bVy-Ih-4d6"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="NQr-NL-uEL" userLabel="cell 2x1">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="y46-JA-9Sv"/>
+                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="qYj-K3-unl"/>
+                        <outlet property="delegate" destination="JQM-vO-i4a" id="FCy-fC-yZc"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="SJb-x2-jWE" userLabel="cell 2x2">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="oFI-WJ-xQb"/>
+                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="cOR-W7-2F5"/>
+                        <outlet property="delegate" destination="pID-5H-b1x" id="VvO-nx-xvT"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="EkG-xt-jhJ" userLabel="cell 2x3">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="tHG-L1-TDB"/>
+                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="FYg-bn-GT9"/>
+                        <outlet property="delegate" destination="7Du-Ho-xvg" id="3PH-Nr-YP2"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="mkh-6v-Kgq" userLabel="cell 3x1">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="sdu-iP-Qye"/>
+                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="CkU-mP-qXB"/>
+                        <outlet property="delegate" destination="H8m-cP-cRe" id="jlg-pf-g7R"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="aEw-Tm-rN4" userLabel="cell 3x2">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="dgW-nz-gxh"/>
+                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="scc-L0-xl1"/>
+                        <outlet property="delegate" destination="xmI-Zn-r9H" id="tza-0r-BWb"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="r2Z-aE-eZl" userLabel="cell 3x3">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="eIh-Uf-j1X"/>
+                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="8g7-EK-bIo"/>
+                        <outlet property="delegate" destination="dMz-eo-jd6" id="txz-am-iB5"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="934" y="665"/>
+            <point key="canvasLocation" x="833" y="701"/>
         </scene>
     </scenes>
     <resources>
-        <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="play.circle.fill" catalog="system" width="128" height="123"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="pencil" catalog="system" width="32" height="32"/>
+        <image name="play.circle.fill" catalog="system" width="32" height="32"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
