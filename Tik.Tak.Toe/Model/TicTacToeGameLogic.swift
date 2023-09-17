@@ -80,4 +80,9 @@ class TicTacToeGameLogic {
     func checkForDraw() -> Bool {
         return gameBoard.count == maxMoves
     }
+    
+    // Return an array of empty positions on the game board
+    func getEmptyPositions() -> [Int] {
+        return (1...9).filter { gameBoard[$0] == nil }
+    }
 }

@@ -319,7 +319,7 @@
                                 <size key="shadowOffset" width="1" height="-2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcX-vR-KxW">
-                                <rect key="frame" x="37" y="150" width="300" height="44"/>
+                                <rect key="frame" x="48" y="229" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
@@ -330,28 +330,56 @@
                                 <rect key="frame" x="62" y="281" width="249" height="242"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8W-i8-Ygi" userLabel="cell 1x1">
-                                        <rect key="frame" x="8" y="8" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="UPg-Vq-1aA" appends="YES" id="f7Q-d3-TMo"/>
-                                        </connections>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bty-PU-FAc" userLabel="cell 1x2">
+                                    <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bty-PU-FAc" userLabel="cell 1x2">
                                         <rect key="frame" x="90" y="8" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="FEW-s7-BIC" appends="YES" id="CLT-D9-9k6"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R1u-Ke-K6X" userLabel="cell 1x3">
+                                    <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="R1u-Ke-K6X" userLabel="cell 1x3">
                                         <rect key="frame" x="172" y="8" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="eQU-G3-1OS" appends="YES" id="XL1-dQ-S6A"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQM-vO-i4a" userLabel="cell 2x1">
+                                    <imageView clipsSubviews="YES" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pID-5H-b1x" userLabel="cell 2x2">
+                                        <rect key="frame" x="90" y="86" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="SJb-x2-jWE" appends="YES" id="Sao-t5-vas"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="7Du-Ho-xvg" userLabel="cell 2x3">
+                                        <rect key="frame" x="172" y="86" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="EkG-xt-jhJ" appends="YES" id="ebF-Uo-o4L"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="xmI-Zn-r9H" userLabel="cell 3x2">
+                                        <rect key="frame" x="90" y="164" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="aEw-Tm-rN4" appends="YES" id="Jwj-iX-Y8O"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" tag="9" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="dMz-eo-jd6" userLabel="cell 3x3">
+                                        <rect key="frame" x="172" y="164" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="r2Z-aE-eZl" appends="YES" id="QHf-4E-QKA"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="z8W-i8-Ygi" userLabel="cell 1x1">
+                                        <rect key="frame" x="8" y="8" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="UPg-Vq-1aA" appends="YES" id="f7Q-d3-TMo"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="JQM-vO-i4a" userLabel="cell 2x1">
                                         <rect key="frame" x="8" y="86" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
@@ -359,46 +387,32 @@
                                             <outletCollection property="gestureRecognizers" destination="NQr-NL-uEL" appends="YES" id="x2U-Uq-V1s"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pID-5H-b1x" userLabel="cell 2x2">
-                                        <rect key="frame" x="90" y="86" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="SJb-x2-jWE" appends="YES" id="Sao-t5-vas"/>
-                                        </connections>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Du-Ho-xvg" userLabel="cell 2x3">
-                                        <rect key="frame" x="172" y="86" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="EkG-xt-jhJ" appends="YES" id="ebF-Uo-o4L"/>
-                                        </connections>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8m-cP-cRe" userLabel="cell 3x1">
+                                    <imageView clipsSubviews="YES" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="H8m-cP-cRe" userLabel="cell 3x1">
                                         <rect key="frame" x="8" y="164" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="mkh-6v-Kgq" appends="YES" id="UER-Ay-wMu"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xmI-Zn-r9H" userLabel="cell 3x2">
-                                        <rect key="frame" x="90" y="164" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="aEw-Tm-rN4" appends="YES" id="Jwj-iX-Y8O"/>
-                                        </connections>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" tag="9" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMz-eo-jd6" userLabel="cell 3x3">
-                                        <rect key="frame" x="172" y="164" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="r2Z-aE-eZl" appends="YES" id="QHf-4E-QKA"/>
-                                        </connections>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLf-ST-JeG">
+                                <rect key="frame" x="37" y="109" width="300" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Player´s turn">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="180" id="uSt-81-gVr">
-                                <rect key="frame" x="37" y="629" width="300" height="44"/>
+                                <rect key="frame" x="37" y="531" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
@@ -411,64 +425,56 @@
                     </view>
                     <navigationItem key="navigationItem" id="svl-P2-EjZ"/>
                     <connections>
-                        <outlet property="lblPlayer1" destination="QcX-vR-KxW" id="Tk2-5C-D3m"/>
-                        <outlet property="lblPlayer2" destination="uSt-81-gVr" id="gDv-Vm-hAR"/>
-                        <outlet property="lblScore" destination="eI3-SK-Fae" id="kRF-X7-90H"/>
+                        <outlet property="aiLabel" destination="uSt-81-gVr" id="gDv-Vm-hAR"/>
+                        <outlet property="playerLabel" destination="QcX-vR-KxW" id="Tk2-5C-D3m"/>
+                        <outlet property="playersTurnLabel" destination="yLf-ST-JeG" id="Cyq-A9-DaD"/>
+                        <outlet property="scoreLabel" destination="eI3-SK-Fae" id="kRF-X7-90H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSm-pR-XGa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="UPg-Vq-1aA" userLabel="cell 1x1">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="yyT-04-xze"/>
-                        <outlet property="delegate" destination="z8W-i8-Ygi" id="g3f-lf-FCs"/>
+                        <action selector="handleCellTap:" destination="jrc-Jq-5Hl" id="S1q-dT-vC5"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="FEW-s7-BIC" userLabel="cell 1x2">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="oUD-UV-ynk"/>
-                        <outlet property="delegate" destination="bty-PU-FAc" id="duJ-w0-QHj"/>
+                        <action selector="handleCellTap:" destination="jrc-Jq-5Hl" id="AoG-pa-jnN"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="eQU-G3-1OS" userLabel="cell 1x3">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="AqI-WT-u6F"/>
-                        <outlet property="delegate" destination="R1u-Ke-K6X" id="bVy-Ih-4d6"/>
+                        <action selector="handleCellTap:" destination="jrc-Jq-5Hl" id="nQ5-vW-ak8"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="NQr-NL-uEL" userLabel="cell 2x1">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="qYj-K3-unl"/>
-                        <outlet property="delegate" destination="JQM-vO-i4a" id="FCy-fC-yZc"/>
+                        <action selector="handleCellTap:" destination="jrc-Jq-5Hl" id="ulp-Fe-oUY"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="SJb-x2-jWE" userLabel="cell 2x2">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="cOR-W7-2F5"/>
-                        <outlet property="delegate" destination="pID-5H-b1x" id="VvO-nx-xvT"/>
+                        <action selector="handleCellTap:" destination="jrc-Jq-5Hl" id="jBc-KN-csg"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="EkG-xt-jhJ" userLabel="cell 2x3">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="FYg-bn-GT9"/>
-                        <outlet property="delegate" destination="7Du-Ho-xvg" id="3PH-Nr-YP2"/>
+                        <action selector="handleCellTap:" destination="jrc-Jq-5Hl" id="adq-JO-0b4"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="mkh-6v-Kgq" userLabel="cell 3x1">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="CkU-mP-qXB"/>
-                        <outlet property="delegate" destination="H8m-cP-cRe" id="jlg-pf-g7R"/>
+                        <action selector="handleCellTap:" destination="jrc-Jq-5Hl" id="tZO-uZ-Cu8"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="aEw-Tm-rN4" userLabel="cell 3x2">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="scc-L0-xl1"/>
-                        <outlet property="delegate" destination="xmI-Zn-r9H" id="tza-0r-BWb"/>
+                        <action selector="handleCellTap:" destination="jrc-Jq-5Hl" id="HQz-Ua-M8A"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="r2Z-aE-eZl" userLabel="cell 3x3">
                     <connections>
-                        <action selector="tapped:" destination="jrc-Jq-5Hl" id="8g7-EK-bIo"/>
-                        <outlet property="delegate" destination="dMz-eo-jd6" id="txz-am-iB5"/>
+                        <action selector="handleCellTap:" destination="jrc-Jq-5Hl" id="GeD-JD-sUA"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

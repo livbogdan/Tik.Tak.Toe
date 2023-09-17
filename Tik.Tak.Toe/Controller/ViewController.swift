@@ -104,7 +104,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if segue.identifier == playerVsAISegue {
             if segue.destination is PVEViewController {
                 if let destinationVC = segue.destination as? PVEViewController {
-                    destinationVC.p1receivedText = player1_Label.text
+                    destinationVC.playerName = player1_Label.text
                 }
             }
         }
