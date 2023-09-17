@@ -17,6 +17,7 @@
 		E313139D2AA9FEAA003B1586 /* Tik_Tak_ToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313139C2AA9FEAA003B1586 /* Tik_Tak_ToeUITests.swift */; };
 		E313139F2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E313139E2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift */; };
 		E31313AC2AABC3AC003B1586 /* PVPGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31313AB2AABC3AC003B1586 /* PVPGameViewController.swift */; };
+		E3426A692AB5DC3B00485F12 /* TicTacToeGameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3426A682AB5DC3B00485F12 /* TicTacToeGameLogic.swift */; };
 		E3C188CA2AB1B81B007543D5 /* PVEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C188C92AB1B81A007543D5 /* PVEViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		E313139C2AA9FEAA003B1586 /* Tik_Tak_ToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tik_Tak_ToeUITests.swift; sourceTree = "<group>"; };
 		E313139E2AA9FEAA003B1586 /* Tik_Tak_ToeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tik_Tak_ToeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E31313AB2AABC3AC003B1586 /* PVPGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVPGameViewController.swift; sourceTree = "<group>"; };
+		E3426A682AB5DC3B00485F12 /* TicTacToeGameLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeGameLogic.swift; sourceTree = "<group>"; };
 		E3C188C92AB1B81A007543D5 /* PVEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVEViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 		E3DDC6CD2AACD0F900D716D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E3426A682AB5DC3B00485F12 /* TicTacToeGameLogic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				E31313AC2AABC3AC003B1586 /* PVPGameViewController.swift in Sources */,
 				E313137C2AA9FEA7003B1586 /* AppDelegate.swift in Sources */,
 				E313137E2AA9FEA7003B1586 /* SceneDelegate.swift in Sources */,
+				E3426A692AB5DC3B00485F12 /* TicTacToeGameLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

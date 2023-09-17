@@ -16,8 +16,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var player2_Label: UILabel!
     
     //Send Players name to another View
-    var player1TextToPass: String?
-    var player2TextToPass: String?
+    var player1TextToPass = "Player 1"
+    var player2TextToPass = "Player 2"
     
     //PLayers Text Field
     @IBOutlet weak var player1_TextField: UITextField!
@@ -43,71 +43,42 @@ class ViewController: UIViewController, UITextFieldDelegate {
         player2_TextField.delegate = self
     }
     
+    
+    private func editPlayerName(playerLabel: UILabel, textField: UITextField, editButton: UIButton, otherEditButton: UIButton) {
+        if isEditingPlayer {
+            if let editedName = textField.text {
+                playerLabel.text = editedName
+            }
+            textField.isHidden = true
+            playerLabel.isHidden = false
+            editButton.setImage(UIImage(systemName: "pencil"), for: .normal)
+            editButton.isUserInteractionEnabled = false
+            otherEditButton.isUserInteractionEnabled = true
+            print("New name is \(playerLabel.text ?? "")")
+        } else {
+            textField.resignFirstResponder()
+            textField.text = playerLabel.text
+            textField.isHidden = false
+            playerLabel.isHidden = true
+            editButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
+            textField.becomeFirstResponder()
+            editButton.isUserInteractionEnabled = true
+            otherEditButton.isUserInteractionEnabled = false
+            print("Old name is \(playerLabel.text ?? "")")
+        }
+        isEditingPlayer = !isEditingPlayer
+    }
+    
     // MARK: - Actions
     
     @IBAction func editNamePlayer1(_ sender: UIButton) {
-        if isEditingPlayer {
-            
-            // Save the edited name and update the label
-            if let editedName = player1_TextField.text {
-                player1_Label.text = editedName
-            }
-            
-            // Hide the text field and show the label
-            player1_TextField.isHidden = true
-            player1_Label.isHidden = false
-            player1_EditButton.setImage(UIImage(systemName: "pencil"), for: .normal)
-            print("New name is \(player1_Label.text ?? "")")
-        } else {
-            
-            // Resign first responder for Player 1's text field
-            player2_TextField.resignFirstResponder()
-            
-            // Start editing
-            player1_TextField.text = player1_Label.text
-            player1_TextField.isHidden = false
-            player1_Label.isHidden = true
-            player1_EditButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
-            player1_TextField.becomeFirstResponder() // Show the keyboard
-            print("Old name is \(player1_Label.text ?? "")")
-        }
-        
-        // Toggle the edit state.
-        isEditingPlayer = !isEditingPlayer
+        editPlayerName(playerLabel: player1_Label, textField: player1_TextField, editButton: player1_EditButton, otherEditButton: player2_EditButton)
         
     }
 
     @IBAction func editNamePlayer2(_ sender: UIButton) {
         
-        if isEditingPlayer {
-            
-            // Save the edited name and update the label
-            if let editedName = player2_TextField.text {
-                player2_Label.text = editedName
-            }
-            
-            // Hide the text field and show the label
-            player2_TextField.isHidden = true
-            player2_Label.isHidden = false
-            player2_EditButton.setImage(UIImage(systemName: "pencil"), for: .normal)
-            print("New name is \(player2_Label.text ?? "")")
-        } else {
-            
-            // Resign first responder for Player 2's text field
-            player1_TextField.resignFirstResponder()
-            
-            // Start editing
-            player2_TextField.text = player2_Label.text
-            player2_TextField.isHidden = false
-            player2_Label.isHidden = true
-            player2_EditButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
-            player2_TextField.becomeFirstResponder()// Show the keyboard
-
-            print("Old name is \(player2_Label.text ?? "")")
-        }
-        
-        // Toggle the edit state.
-        isEditingPlayer = !isEditingPlayer
+        editPlayerName(playerLabel: player2_Label, textField: player2_TextField, editButton: player2_EditButton, otherEditButton: player1_EditButton)
     }
     
     // Action to start a player vs. player game.
@@ -125,8 +96,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == playerVsPlayerSegue {
             if let destinationVC = segue.destination as? PVPGameViewController {
-                destinationVC.p1receivedText = player1_Label.text
-                destinationVC.p2receivedText = player2_Label.text
+                destinationVC.player1Name = player1_Label.text
+                destinationVC.player2Name = player2_Label.text
             }
         }
         
