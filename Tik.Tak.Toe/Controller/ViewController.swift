@@ -44,41 +44,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    private func editPlayerName(playerLabel: UILabel, textField: UITextField, editButton: UIButton, otherEditButton: UIButton) {
-        if isEditingPlayer {
-            if let editedName = textField.text {
-                playerLabel.text = editedName
-            }
-            textField.isHidden = true
-            playerLabel.isHidden = false
-            editButton.setImage(UIImage(systemName: "pencil"), for: .normal)
-            editButton.isUserInteractionEnabled = false
-            otherEditButton.isUserInteractionEnabled = true
-            print("New name is \(playerLabel.text ?? "")")
-        } else {
-            textField.resignFirstResponder()
-            textField.text = playerLabel.text
-            textField.isHidden = false
-            playerLabel.isHidden = true
-            editButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
-            textField.becomeFirstResponder()
-            editButton.isUserInteractionEnabled = true
-            otherEditButton.isUserInteractionEnabled = false
-            print("Old name is \(playerLabel.text ?? "")")
-        }
-        isEditingPlayer = !isEditingPlayer
+    private func editPlayerName(playerLabel: UILabel, textField: UITextField, editButton: UIButton) {
+		if textField.isHidden {
+			// Entering edit mode
+			textField.text = playerLabel.text
+			textField.isHidden = false
+			playerLabel.isHidden = true
+			editButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
+			textField.becomeFirstResponder()
+		} else {
+			// Exiting edit mode
+			if let editedName = textField.text {
+				playerLabel.text = editedName
+			}
+			textField.isHidden = true
+			playerLabel.isHidden = false
+			editButton.setImage(UIImage(systemName: "pencil"), for: .normal)
+			textField.resignFirstResponder()
+		}
     }
     
     // MARK: - Actions
     
     @IBAction func editNamePlayer1(_ sender: UIButton) {
-        editPlayerName(playerLabel: player1_Label, textField: player1_TextField, editButton: player1_EditButton, otherEditButton: player2_EditButton)
+        editPlayerName(playerLabel: player1_Label, textField: player1_TextField, editButton: player1_EditButton)
         
     }
 
     @IBAction func editNamePlayer2(_ sender: UIButton) {
         
-        editPlayerName(playerLabel: player2_Label, textField: player2_TextField, editButton: player2_EditButton, otherEditButton: player1_EditButton)
+        editPlayerName(playerLabel: player2_Label, textField: player2_TextField, editButton: player2_EditButton)
     }
     
     // Action to start a player vs. player game.

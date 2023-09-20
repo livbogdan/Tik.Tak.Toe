@@ -3,12 +3,13 @@ import UIKit
 class PVEViewController: UIViewController {
     
     // MARK: Outlets
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var playerScoreLabel: UILabel!
     @IBOutlet weak var playerLabel: UILabel!
     @IBOutlet weak var aiLabel: UILabel!
     @IBOutlet weak var playersTurnLabel: UILabel!
-    
-    // MARK: Constants
+	@IBOutlet weak var aiScoreLabel: UILabel!
+	
+	// MARK: Constants
     var backgroundImageName = UIImage(named: "background")
     
     // MARK: Variables
@@ -20,6 +21,7 @@ class PVEViewController: UIViewController {
     var gameLogic = TicTacToeGameLogic()
     
     // MARK: View Lifecycle
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -27,6 +29,7 @@ class PVEViewController: UIViewController {
     }
     
     // MARK: UI Setup
+	
     func setupUI(){
         if let name = playerName{
             playerLabel.text = name
@@ -94,7 +97,8 @@ class PVEViewController: UIViewController {
     }
     
     func updateScoreLabel() {
-        scoreLabel.text = "\(playerName ?? "Player") = \(playerScore)  \(aiName ?? "AI") = \(aiScore)"
+        playerScoreLabel.text = "Score: \(playerScore)"
+		aiScoreLabel.text = "Score: \(aiScore)"
     }
     
     func resetPlayerTurnLabel() {
@@ -102,8 +106,40 @@ class PVEViewController: UIViewController {
             playersTurnLabel.text = "\(player1Name) Turn"
         }
     }
+	
+	func performAIPlayerMove() {
+		// Get the list of empty positions on the game board
+		let emptyPositions = gameLogic.getEmptyPositions()
+		
+		if emptyPositions.isEmpty {
+			// No empty positions left; the game is a draw
+			showResult("It's a draw")
+			return
+		}
+		
+		// Simulate AI's move (for example, random move)
+		let randomIndex = Int.random(in: 0..<emptyPositions.count)
+		let aiMove = emptyPositions[randomIndex]
+		gameLogic.makeMove(at: aiMove)
+		
+		DispatchQueue.main.async {
+			if let imageView = self.view.viewWithTag(aiMove) as? UIImageView {
+				imageView.image = UIImage(named: "Player2")
+				self.playersTurnLabel.text = "\(self.playerName ?? "AI")'s Turn"
+			}
+			
+			if self.gameLogic.isGameOver {
+				if self.gameLogic.checkForWin() {
+					self.showResult("AI won!")
+				} else if self.gameLogic.checkForDraw() {
+					self.showResult("It's a draw")
+				}
+			}
+		}
+	}
     
     //MARK: Actions
+	
     @IBAction func handleCellTap(_ sender: UITapGestureRecognizer) {
         if gameLogic.isGameOver {
             return
@@ -130,34 +166,4 @@ class PVEViewController: UIViewController {
         }
     }
     
-    func performAIPlayerMove() {
-        // Get the list of empty positions on the game board
-        let emptyPositions = gameLogic.getEmptyPositions()
-        
-        if emptyPositions.isEmpty {
-            // No empty positions left; the game is a draw
-            showResult("It's a draw")
-            return
-        }
-        
-        // Simulate AI's move (for example, random move)
-        let randomIndex = Int.random(in: 0..<emptyPositions.count)
-        let aiMove = emptyPositions[randomIndex]
-        gameLogic.makeMove(at: aiMove)
-        
-        DispatchQueue.main.async {
-            if let imageView = self.view.viewWithTag(aiMove) as? UIImageView {
-                imageView.image = UIImage(named: "Player2")
-                self.playersTurnLabel.text = "\(self.playerName ?? "AI")'s Turn"
-            }
-            
-            if self.gameLogic.isGameOver {
-                if self.gameLogic.checkForWin() {
-                    self.showResult("AI won!")
-                } else if self.gameLogic.checkForDraw() {
-                    self.showResult("It's a draw")
-                }
-            }
-        }
-    }
 }

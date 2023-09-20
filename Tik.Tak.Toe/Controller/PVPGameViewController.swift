@@ -3,12 +3,13 @@ import UIKit
 class PVPGameViewController: UIViewController {
     
     // MARK: Outlets
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var player1ScoreLabel: UILabel!
+	@IBOutlet weak var player2ScoreLabel: UILabel!
     @IBOutlet weak var Player1Label: UILabel!
     @IBOutlet weak var Player2Label: UILabel!
     @IBOutlet weak var PlayerTurnLabel: UILabel!
-    
-    // MARK: - Constants
+	
+	// MARK: - Constants
     let backgroundImageName = UIImage(named: "background")
         
     // MARK: - Variables
@@ -111,7 +112,8 @@ class PVPGameViewController: UIViewController {
     }
     
     func updateScoreLabel(){
-        scoreLabel.text = "\(player1Name ?? "Player 1") = \(player1Score) - \(player2Name ?? "Player 2") = \(player2Score)"
+        player1ScoreLabel.text = "Score: \(player1Score)"
+		player2ScoreLabel.text = "Score: \(player2Score)"
     }
     
     func resetPlayerTurnLabel() {
