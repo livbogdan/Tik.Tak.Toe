@@ -3,38 +3,39 @@ import UIKit
 class PVPGameViewController: UIViewController {
     
     // MARK: Outlets
-    @IBOutlet weak var player1ScoreLabel: UILabel!
-	@IBOutlet weak var player2ScoreLabel: UILabel!
-    @IBOutlet weak var Player1Label: UILabel!
-    @IBOutlet weak var Player2Label: UILabel!
-    @IBOutlet weak var PlayerTurnLabel: UILabel!
+    @IBOutlet weak var player1ScoreLabel: UILabel! // Player 1's score label
+	@IBOutlet weak var player2ScoreLabel: UILabel! // Player 2's score label
+    @IBOutlet weak var Player1Label: UILabel! // Player 1's name label
+    @IBOutlet weak var Player2Label: UILabel! // Player 2's name label
+    @IBOutlet weak var PlayerTurnLabel: UILabel! // Label indicating whose turn it is
 	
 	// MARK: - Constants
-    let backgroundImageName = UIImage(named: "background")
+    let backgroundImageName = UIImage(named: "background") // Background image
         
     // MARK: - Variables
-    var player1Name: String?
-    var player2Name: String?
-    var player1Score = 0
-    var player2Score = 0
-    var isGameOver = false
-    var gameLogic = TicTacToeGameLogic()
-    var currentPlayer: TicTacToeGameLogic.Player = .X
+    var player1Name: String? // Player 1's name
+    var player2Name: String? // Player 2's name
+    var player1Score = 0 // Player 1's score
+    var player2Score = 0 // Player 2's score
+    var isGameOver = false // Flag indicating if the game is over
+    var gameLogic = TicTacToeGameLogic() // Game logic
+    var currentPlayer: TicTacToeGameLogic.Player = .X // Current player
         
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        gameLogic.resetGame()
+        setupUI() // Set up the user interface
+        gameLogic.resetGame() // Reset the game logic
     }
         
     // MARK: - UI Setup
     func setupUI() {
+        view.backgroundColor = .lightGray // Set the background color of the view
+        
         // Set player names and background color for Player 1 label
         if let name = player1Name {
             Player1Label.text = name
             PlayerTurnLabel.text = "\(name)'s Turn"
-            //Player1Label.backgroundColor = .green
         }
         
         // Set Player 2 name
@@ -122,9 +123,8 @@ class PVPGameViewController: UIViewController {
         }
     }
 
-        
     // MARK: - Actions
-    // - Handle cell tap gesture
+
     @IBAction func handleCellTap(_ sender: UITapGestureRecognizer) {
         
         // Check if the game is over, and return if it is
@@ -143,15 +143,11 @@ class PVPGameViewController: UIViewController {
                     imageView.image = UIImage(named: "Player1")
                     PlayerTurnLabel.text = "\(player2Name ?? "Player 2")'s Turn"
                     print("Player 1 \(imageView) was tapped.")
-//                    Player1Label.backgroundColor = UIColor.green
-//                    Player2Label.backgroundColor = UIColor.clear
                 } else {
                     imageView.image = UIImage(named: "Player2")
                     gameLogic.gameBoard[imageViewTag] = .O
                     PlayerTurnLabel.text = "\(player1Name ?? "Player 1")'s Turn"
                     print("Player 2 \(imageView) was tapped.")
-//                    Player2Label.backgroundColor = UIColor.green
-//                    Player1Label.backgroundColor = UIColor.clear
                 }
 
                 if gameLogic.isGameOver {
