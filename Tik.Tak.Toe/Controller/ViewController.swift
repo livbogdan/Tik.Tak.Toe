@@ -12,8 +12,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let playerVsAISegue = "PlayerVsAISegue"
     
     //Players labels
+    @IBOutlet weak var PlayerNameView: UIView!
     @IBOutlet weak var player1_Label: UILabel!
     @IBOutlet weak var player2_Label: UILabel!
+    @IBOutlet weak var Titel: UILabel!
     
     //Send Players name to another View
     var player1TextToPass = "Player 1"
@@ -35,6 +37,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    
+    
+    func setupUI(){
+        view.backgroundColor = .lightGray
+        
+        player1_Label.textColor = .black
+        player1_Label.backgroundColor = .clear
+        player1_Label.layer.cornerRadius = 5
+        player1_Label.layer.borderWidth = 1
+        player1_Label.layer.borderColor = UIColor(ciColor: .black).cgColor
+        
+        player2_Label.textColor = .black
+        player2_Label.backgroundColor = .clear
+        player2_Label.layer.cornerRadius = 5
+        player2_Label.layer.borderWidth = 1
+        player2_Label.layer.borderColor = UIColor(ciColor: .black).cgColor
+        
         
         // Hide the text fields initially and set their delegates.
         player1_TextField.isHidden = true
@@ -42,7 +63,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         player2_TextField.isHidden = true
         player2_TextField.delegate = self
     }
-    
     
     private func editPlayerName(playerLabel: UILabel, textField: UITextField, editButton: UIButton) {
 		if textField.isHidden {
