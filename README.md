@@ -1,3 +1,4 @@
+
 The provided code represents a Tic-Tac-Toe game built using the Model-View-Controller (MVC) architectural pattern in Swift with UIKit. I'll provide a detailed description of the game structure and functionality based on the code you've provided.
 
 ### MVC Structure
@@ -59,3 +60,12 @@ The UI elements are styled with borders and background colors to enhance the vis
 7. Players can continue or start a new game.
 
 This is a comprehensive breakdown of the provided code for a Tic-Tac-Toe game implemented using Swift and UIKit's MVC architecture.
+
+
+Original Story board with drag and drop.
+
+<img width="1792" alt="Skärmavbild 2023-09-28 kl  18 56 22" src="https://github.com/livbogdan/Tik.Tak.Toe/assets/33436357/59dc1019-b590-4a4f-ad6d-54cecfeaac4b">
+
+Through meticulous manual visual styling, I meticulously tailored the user interface for the view controller within our application. The goal was to create an immersive and visually captivating experience, particularly within the context of the PVE (Player vs. Environment) view
+
+<img width="1371" alt="Skärmavbild 2023-09-28 kl  19 00 04" src="https://github.com/livbogdan/Tik.Tak.Toe/assets/33436357/37f056f4-e4dd-4f8a-b48d-c30656377b26">
