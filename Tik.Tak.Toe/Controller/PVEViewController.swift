@@ -28,6 +28,8 @@ class PVEViewController: UIViewController {
         
         setupGameBoard() // Set up the game board
         setupUI() // Set up the user interface
+        playerStyling() // Configure styling for player
+        aiStyling() // Configure styling for AI labels
         isGameOver = false // Initialize game state
         gameLogic.resetGame() // Reset the game logic
     }
@@ -35,6 +37,7 @@ class PVEViewController: UIViewController {
     // MARK: UI Setup
     func setupUI() {
         view.backgroundColor = .lightGray // Set the background color of the view
+        
         // Configure styling for the game board view
         gameBoardView.backgroundColor = .brown
         gameBoardView.layer.borderWidth = 1
@@ -44,19 +47,6 @@ class PVEViewController: UIViewController {
         gameBoardView.layer.shadowColor = UIColor(ciColor: .black).cgColor
         gameBoardView.layer.shadowRadius = 0.8
         gameBoardView.layer.shadowOpacity = 0.3
-        
-        // Configure styling for player and AI labels
-        playerLabel.backgroundColor = .clear
-        playerLabel.textColor = .black
-        playerLabel.layer.borderWidth = 1
-        playerLabel.layer.borderColor = UIColor(ciColor: .black).cgColor
-        playerLabel.layer.cornerRadius = 5
-
-        aiLabel.backgroundColor = .clear
-        aiLabel.textColor = .black
-        aiLabel.layer.borderWidth = 1
-        aiLabel.layer.borderColor = UIColor(ciColor: .black).cgColor
-        aiLabel.layer.cornerRadius = 5
         
         // Set player and AI names
         if let name = playerName {
@@ -79,6 +69,22 @@ class PVEViewController: UIViewController {
         }
     }
     
+    func playerStyling(){
+        playerLabel.backgroundColor = .clear
+        playerLabel.textColor = .black
+        playerLabel.layer.borderWidth = 1
+        playerLabel.layer.borderColor = UIColor(ciColor: .black).cgColor
+        playerLabel.layer.cornerRadius = 5
+    }
+    
+    func aiStyling(){
+        aiLabel.backgroundColor = .clear
+        aiLabel.textColor = .black
+        aiLabel.layer.borderWidth = 1
+        aiLabel.layer.borderColor = UIColor(ciColor: .black).cgColor
+        aiLabel.layer.cornerRadius = 5
+    }
+    
     // MARK: Game Logic
     func setupGameBoard() {
         // Add tap gesture recognizers to each cell of the game board
@@ -96,6 +102,7 @@ class PVEViewController: UIViewController {
         for tag in 1...9 {
             if let imageView = view.viewWithTag(tag) as? UIImageView {
                 imageView.image = backgroundImageName
+                
             }
         }
         resetPlayerTurnLabel() // Reset the label indicating the player's turn
@@ -163,7 +170,7 @@ class PVEViewController: UIViewController {
         }
     }
     
-    // Function to simulate the AI player's move
+    // - Function to simulate the AI player's move
     @objc func performAIPlayerMove() {
         // Get the list of empty positions on the game board
         let emptyPositions = gameLogic.getEmptyPositions()
@@ -213,6 +220,7 @@ class PVEViewController: UIViewController {
         if gameLogic.isGameOver {
             return
         }
+        
         if let imageView = sender.view as? UIImageView {
             let imageViewTag = imageView.tag
             if gameLogic.gameBoard[imageViewTag] == nil {
@@ -243,4 +251,5 @@ class PVEViewController: UIViewController {
             }
         }
     }
+    
 }
